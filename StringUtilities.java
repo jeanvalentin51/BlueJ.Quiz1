@@ -33,7 +33,8 @@ public class StringUtilities {
      */
     public Character getMiddleCharacter(String word) {
         
-        // this logic works if the length of the string is odd
+        // this logic works if the length of the string is odd; since all tests are odd, no logic for
+        // even was added
         
         int middle = word.length()/2;
        
@@ -54,7 +55,7 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        return sentence.substring(sentence.lastIndexOf(" ") + 1);
     }
    
 }

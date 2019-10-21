@@ -22,7 +22,9 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        StringBuilder str = new StringBuilder(valueToBeReversed);
+        
+        return String.valueOf(str.reverse());
     }
 
     /**

@@ -32,7 +32,12 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        
+        // this logic works if the length of the string is odd
+        
+        int middle = word.length()/2;
+       
+        return word.charAt(middle);
     }
 
     /**

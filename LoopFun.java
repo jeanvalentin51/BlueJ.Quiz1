@@ -10,7 +10,12 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          int result = 1;
+          
+          for (int i=1; i<=number; i++){
+              result *= i;
+          }
+          return result;
       }
 
       /**

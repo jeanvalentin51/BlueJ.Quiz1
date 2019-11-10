@@ -57,9 +57,23 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          String [] alphabet = {"a", "b","c","d"};
-          String toEncrypt = "";
-             
-          return null;
+          String [] alphabet = {"a","b","c", "d", "e", "f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
+        String [] toEncrypt = word.split("");
+        String result = "";
+
+        int newIndex = 0;
+        for (int x = 0; x < toEncrypt.length; x++) {
+            for (int i = 0; i < alphabet.length; i++) {
+                newIndex = i + 3;
+                if (newIndex >= alphabet.length) {
+                    newIndex -= alphabet.length;
+                }
+                if (toEncrypt[x].equals(alphabet[i])){
+                    result = result.concat(alphabet[newIndex]);
+                }
+
+            }
+        }
+        return result;
       }
 }
